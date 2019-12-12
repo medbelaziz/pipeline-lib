@@ -1,6 +1,7 @@
-#!/usr/bin/groovy
+
+import static com.orange.PipelineJenkins
 
 def call() {
+	exec()
 
-	
 }
