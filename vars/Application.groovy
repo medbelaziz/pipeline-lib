@@ -10,7 +10,7 @@ def call() {
 					echo 'Checkouting..................'
 					GitCheckout(
 							branch: "jenkins_conf",
-							url: "https://https://github.com/medbelaziz/bookService.git"
+							url: "https://github.com/medbelaziz/bookService.git"
 							)
 				}
 			}
