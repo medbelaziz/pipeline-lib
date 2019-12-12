@@ -1,5 +1,4 @@
 #!/usr/bin/groovy
-package com.orange
 
 abstract class PipelineTrait implements PipelineInterface {
 
