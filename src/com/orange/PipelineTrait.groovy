@@ -11,21 +11,21 @@ class PipelineTrait {
 	}
 
 
-	static public void build() {
+	static def  build() {
 		def stageName = "Build"
 		this.logStart(stageName)
 		this.logEnd(stageName)
 	}
 
 
-	static  void logStart(String stageName) {
-		echo ">>> logStart ***********************"
-		echo ">>> "+stageName
+	static def  logStart( stageName) {
+		println ">>> logStart ***********************"
+		println ">>> "+stageName
 	}
 
 
-	static void logEnd(String stageName) {
-		echo "<<< "+stageName
-		echo "<<< logEnd ***********************"
+	static def logEnd(String stageName) {
+		println "<<< "+stageName
+		println "<<< logEnd ***********************"
 	}
 }
