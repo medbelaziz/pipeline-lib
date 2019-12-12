@@ -1,3 +1,3 @@
-def call(Map stageParams) {
-	echo "${stageParams.msg} .......... "
+def call(msg) {
+	echo "${msg} .......... "
 }
