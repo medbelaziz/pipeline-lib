@@ -2,8 +2,8 @@
 import com.orange.PipelineJenkins
 
 def call() {
-	println "########## debut #######""
+	println "******** debut ********"
 	exec()
-	println "########## FIN #######""
+	println "******** FIN ********"
 
 }
