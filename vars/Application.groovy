@@ -1,41 +1,33 @@
 #!/usr/bin/groovy
 
 def call() {
-	
+
 	pipeline {
 		agent any
 		stages {
 			stage('Checkout') {
-				steps { echo 'Building..................' }
-				GitCheckout(
-					branch: "jenkins_conf",
-					url: "https://https://github.com/medbelaziz/bookService.git"
-				)
-			}
-			
-			stage('Build') {
-				steps { echo 'Building..................' }
-			}
-
-			stage('Deploy') {
-				parallel {
-					stage('Deploy') {
-						steps { echo 'Deploying......................' }
-					}
-
-					stage('Deploy2') {
-						steps { echo 'From depoying 2..............' }
-					}
-
-					stage('Deploy3') {
-						steps { echo 'Deploy 3..................' }
-					}
+				steps {
+					echo 'Checkouting..................'
+					GitCheckout(
+							branch: "jenkins_conf",
+							url: "https://https://github.com/medbelaziz/bookService.git"
+							)
 				}
 			}
 
-			stage('Test') {
-				steps { echo 'Testing .................' }
+			stage('Build') { steps { echo 'Building..................' } }
+
+			stage('Deploy') {
+				parallel {
+					stage('Deploy') { steps { echo 'Deploying......................' } }
+
+					stage('Deploy2') { steps { echo 'From depoying 2..............' } }
+
+					stage('Deploy3') { steps { echo 'Deploy 3..................' } }
+				}
 			}
+
+			stage('Test') { steps { echo 'Testing .................' } }
 		}
 		post {
 			always { echo 'One way or another, I have finished' }
