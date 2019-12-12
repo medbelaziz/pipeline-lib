@@ -23,14 +23,14 @@ abstract class PipelineTrait implements PipelineInterface {
 	@Override
 	@NonCPS
 	public void logStart(String stageName) {
-		echo ">>> logStart ***********************"
-		echo ">>> "+stageName
+		println(">>> logStart ***********************")
+		println(">>> "+stageName)
 	}
 
 	@Override
 	@NonCPS
 	public void logEnd(String stageName) {
-		echo "<<< "+stageName
-		echo "<<< logEnd ***********************"
+		println("<<< "+stageName)
+		println("<<< logEnd ***********************")
 	}
 }
