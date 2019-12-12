@@ -1,5 +1,5 @@
 
-import static com.orange.PipelineJenkins
+import com.orange.PipelineJenkins
 
 def call() {
 	exec()
