@@ -5,6 +5,14 @@ def call() {
 	pipeline {
 		agent any
 		stages {
+			stage('Checkout') {
+				steps { echo 'Building..................' }
+				GitCheckout(
+					branch: "jenkins_conf",
+					url: "https://https://github.com/medbelaziz/bookService.git"
+				)
+			}
+			
 			stage('Build') {
 				steps { echo 'Building..................' }
 			}
