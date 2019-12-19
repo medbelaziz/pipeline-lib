@@ -1,6 +1,5 @@
 def call(msg) {
-	echo "${msg} .......... "
-}
-def info(msg) {
-	echo "${msg} .......... "
+	echo "${msg} ****************************** "
+	hostMap.puAt("BBBB","bbbb")
+	echo "********************************"
 }
