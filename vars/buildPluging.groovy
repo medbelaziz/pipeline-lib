@@ -1,5 +1,7 @@
 def call(Map hostMap) {
 	echo "************ ************* Build ***************************** "
-	hostMap.putAt("BBBB","bbbb")
+	hostMap.putAt("BBB","bbbb")
+	echo hostMap["AAA"]
+	echo hostMap["BBB"]
 	echo "*********************************************************"
 }
