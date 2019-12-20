@@ -1,3 +1,3 @@
-def call(msg) {
+def call() {
       Utils.markStageSkippedForConditional(STAGE_NAME)
 }
