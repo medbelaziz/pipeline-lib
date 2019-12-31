@@ -5,13 +5,10 @@ def call() {
 	println "******** debut ********"
 	exec()
 	println "******** FIN ********"
-	
-	input {
-            message "Should we continue?"
-            ok "Continue"
-      }
-      steps {
-            echo "Hello, nice to meet you."
-      }
+
+	input 'continue to deploy'
+
+	echo "Hello, nice to meet you."
+      
 
 }
